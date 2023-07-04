@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+        function audioStatusChange(){
+            mBtnAudio.performClick();
+        }
+        function videoStatusChange(){
+            mBtnCamera.performClick();
+        }
+        function leaveStatusChange(){
+            mBtnCallCancle.performClick();
+        }
+    </script>
 </head>
 <body>
     <h1>
         Hello World
     </h1>
     <div>
-        <input type="button" value="Mute Mic" onClick="showAndroidToast('Mute Mic')" />
-        <input type="button" value="Mute Cam" onClick="showAndroidToast('Mute Cam')" />
-        <input type="button" value="Leave Meeting" onClick="showAndroidToast('Leave Meeting')" />
+        <input type="button" value="Mute Mic" onClick="audioStatusChange()" />
+        <input type="button" value="Mute Cam" onClick="videoStatusChange()" />
+        <input type="button" value="Leave Meeting" onClick="leaveStatusChange()" />
     </div>
 </body>
 </html>
