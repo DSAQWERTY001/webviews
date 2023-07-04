@@ -7,10 +7,6 @@
     <script type="text/javascript">
         var androidInterface = window.AndroidInterface || {};
     
-        audio.buttonClicked = function() {
-        // Send a message to the Android application
-            window.location.href = "javascript:window.audio.onButtonClick()";
-        };
         function audioStatusChange(){
             mBtnAudio.performClick();
         }
@@ -24,12 +20,21 @@
 </head>
 <body style="background-color: transparent;">
     <h1>
-        Hello World 7
+        Hello World 9
     </h1>
-    <div style="padding-top: 80vh">
-        <input type="button" value="Mute Mic" onClick="window.audio.buttonClicked()" />
-        <input type="button" value="Mute Cam" onClick="videoStatusChange()" />
-        <input type="button" value="Leave Meeting" onClick="leaveStatusChange()" />
+    <div style="padding-top: 83vh;display: flex; ">
+        <div style="padding-left: 10px;">
+            <input type="button" value="Mute Mic" onClick="Inteface.audio()"/>
+        </div>
+        <div style="padding-left: 10px;">
+            <input type="button" value="Leave" onClick="Inteface.leave()" />
+        </div>
+        <div style="padding-left: 10px;">
+            <input type="button" value="Mute Cam" onClick="Inteface.camera()" />
+        </div>
+        
+        
+        
     </div>
 </body>
 </html>
