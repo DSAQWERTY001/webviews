@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript">
+        var androidInterface = window.AndroidInterface || {};
+    
+        audio.buttonClicked = function() {
+        // Send a message to the Android application
+            window.location.href = "javascript:window.audio.onButtonClick()";
+        };
         function audioStatusChange(){
             mBtnAudio.performClick();
         }
@@ -18,10 +24,10 @@
 </head>
 <body>
     <h1>
-        Hello World 5
+        Hello World 6
     </h1>
     <div>
-        <input type="button" value="Mute Mic" onClick="audio.onButtonClick()" />
+        <input type="button" value="Mute Mic" onClick="window.audio.buttonClicked()" />
         <input type="button" value="Mute Cam" onClick="videoStatusChange()" />
         <input type="button" value="Leave Meeting" onClick="leaveStatusChange()" />
     </div>
